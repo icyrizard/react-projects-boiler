@@ -14,7 +14,7 @@ type ShowToastFunctionProps = {
   message: string;
 };
 
-export type DaToastElement = {
+export type ToastElement = {
   success: ({ message }: ShowToastFunctionProps) => void;
   error: ({ message }: ShowToastFunctionProps) => void;
 };
@@ -25,7 +25,7 @@ const iconMap = {
   default: null,
 };
 
-const AppToast = forwardRef<DaToastElement>((_, forwardedRef) => {
+const AppToast = forwardRef<ToastElement>((_, forwardedRef) => {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
   const [message, setMessage] = useState<string | null>(null);
 

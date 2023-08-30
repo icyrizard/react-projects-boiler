@@ -1,10 +1,10 @@
 import { createContext, MutableRefObject, useContext } from "react";
-import { DaToastElement } from "@/components/Toast.tsx";
+import { ToastElement } from "@/components/Toast.tsx";
 
 interface AppContextType {
   initialized: boolean;
   contentRef: MutableRefObject<HTMLDivElement | null> | null;
-  toast: MutableRefObject<DaToastElement | null> | null;
+  toast: MutableRefObject<ToastElement | null> | null;
   setInitialized: (isInitialized: boolean) => void;
 }
 

@@ -1,6 +1,6 @@
 import { ReactNode, useRef, useState } from "react";
 import { AppContext } from "../context/AppContext";
-import { DaToastElement } from "@/components/Toast.tsx";
+import { ToastElement } from "@/components/Toast.tsx";
 
 export type AxiosProviderProps = {
   children?: ReactNode;
@@ -11,7 +11,7 @@ export function AppProvider({ children }: AxiosProviderProps) {
 
   // can be used to scroll to top of page
   const contentRef = useRef<HTMLDivElement | null>(null);
-  const toast = useRef<DaToastElement | null>(null);
+  const toast = useRef<ToastElement | null>(null);
 
   return (
     <AppContext.Provider
