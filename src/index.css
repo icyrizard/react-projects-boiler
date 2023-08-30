@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: Roboto, Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #F1F1F1;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.btn-default {
+    @apply: text-primary;
+
+    &:hover {
+        @apply text-theme-600;
+    }
+}
+
+.btn-primary {
+    @apply text-white bg-primary border-primary;
+
+    &:hover {
+        @apply text-white bg-theme-700 border-theme-700;
+    }
+
+    &.error {
+        @apply bg-error hover:bg-error-hover;
+    }
+
+    &.success {
+        @apply bg-success hover:bg-success-hover;
+    }
+
+    &.wireframe {
+        @apply bg-white border-theme-gray-500 border text-primary;
+
+        &:hover {
+            @apply text-white bg-theme-700 border-theme-700;
+        }
+
+        &.success {
+            &:hover {
+                @apply bg-success;
+            }
+        }
+
+        &.error {
+            &:hover {
+                @apply bg-error;
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+}
