@@ -1,11 +1,8 @@
-import axios, { AxiosResponse } from "axios";
-import { ReactNode, useEffect, useRef } from "react";
-
-import { AuthTokenResponse } from "@/types/responseTypes.ts";
-import { BootstrapContext } from "@/context/BootstrapContext";
-import { useApi } from "@/context/AxiosContext.tsx";
-import { useApp } from "@/context/AppContext";
-import { useAuth } from "@/context/AuthContext";
+import {ReactNode, useEffect, useRef} from "react";
+import {BootstrapContext} from "@/context/BootstrapContext";
+import {useApi} from "@/context/AxiosContext.tsx";
+import {useApp} from "@/context/AppContext";
+import {useAuth} from "@/context/AuthContext";
 
 export type AxiosProviderProps = {
   children?: ReactNode;
